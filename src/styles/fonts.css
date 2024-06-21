@@ -1,0 +1,67 @@
+/* src/styles/fonts.css */
+
+/* GT America */
+@font-face {
+  font-family: 'gtamerica';
+  src: url('/src/fonts/GT-America-Standard-Light.woff2') format('woff2'),
+	   url('/src/fonts/GT-America-Standard-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gtamerica';
+  src: url('/src/fonts/GT-America-Standard-Regular.woff2') format('woff2'),
+	   url('/src/fonts/GT-America-Standard-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gtamerica';
+  src: url('/src/fonts/GT-America-Standard-Medium.woff2') format('woff2'),
+	   url('/src/fonts/GT-America-Standard-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gtamerica';
+  src: url('/src/fonts/GT-America-Standard-Bold.woff2') format('woff2'),
+	   url('/src/fonts/GT-America-Standard-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Nib */
+@font-face {
+  font-family: 'nib';
+  src: url('/src/fonts/nib-italic-pro.woff2') format('woff2'),
+	   url('/src/fonts/nib-italic-pro.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'nib';
+  src: url('/src/fonts/nib-light-italic-pro.woff2') format('woff2'),
+	   url('/src/fonts/nib-light-italic-pro.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'nib';
+  src: url('/src/fonts/nib-regular-pro.woff2') format('woff2'),
+	   url('/src/fonts/nib-regular-pro.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nib';
+  src: url('/src/fonts/nib-semibold-italic-pro.woff2') format('woff2'),
+	   url('/src/fonts/nib-semibold-italic-pro.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}

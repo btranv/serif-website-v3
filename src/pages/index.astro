@@ -1,0 +1,224 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Serif Membership">
+	<main>
+		
+		<header class="container">
+			<div class="grid grid-cols-2 grid-flow-col gap-4">
+				<div class="flex flex-col text-center sm:text-left">
+					<svg class="w-36 inline aspect-[661/308]">
+						<use href="#serif_logo"></use>
+					</svg>
+					<p class="font-serif inline">A members club for LGBTQ+ industry leaders and creators</p>
+				</div>
+				<div class="text-center sm:text-right">
+					<div>66 east 55th Street, NY</div>
+					<div><a href="#apply" class="rounded-full px-4 py-2 bg-white border-2 border-white border-solid text-black text-serif uppercase">Apply to Join</a></div>
+				</div>
+			</div>
+		</header>
+		
+		<div class="w-custom-108vw max-w-custom-96.5625rem -ms-[4vw] 2xl:mx-auto">
+			<svg class="w-custom-108vw max-w-custom-96.5625rem aspect-[661/308]">
+				<use href="#serif_logo"></use>
+			</svg>
+		</div>
+		
+		
+		<section class="container">
+			<div class="flex flex-col sm:flex-row lg:flex-row gap-4">
+				<div class="w-full sm:w-30 lg:w-2/5">
+					<h2 class="font-sans uppercase text-[2rem] font-bold">For Anyone</h2>
+					<h3 class="font-serif font-light text-[2rem] italic">who wants more</h3>
+				</div>
+				
+				<div class="w-full sm:w-70 lg:w-3/5">
+					<h4 class="font-serif text-5xl italic font-light leading-snug mb-10">Serif is a members club for LGBTQ+ and ally leaders from all industries: Fashion, Entertainment, Finance, Music, Tech, and beyond.</h4>
+					<p class="font-serif text-2xl italic font-light mb-6">As a member, you’ll have access to a curated community and a place to network, entertain, be entertained, find inspiration, and maybe even fall in love.</p>
+					<p class="font-serif text-2xl italic font-light mb-20">Ahead of opening, we invite you to become a member of our inaugural location on 66 east 55th Street.</p>
+					<img src="/images/serif-map.webp" alt="Map of Serif's Location" loading="lazy" width="867" height="443" class="mt-2.5 mb-32" />
+				</div>
+			</div>
+
+		</section>
+		
+		<section class="container">
+			<h2 class="font-sans uppercase text-[2rem] font-bold">Find Yourself <span class="font-serif font-light italic lowercase">here</span></h2>
+			<ul class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-x-4 text-3xl font-serif italic font-light mt-16">
+				<li class="flex flex-col justify-between py-5 border-b border-white border-solid border-t">Curated Community</li>
+				<li class="flex flex-col justify-between py-5 border-b border-white border-solid border-t">Theatre &amp; Screening Room</li>
+				<li class="flex flex-col justify-between py-5 border-b border-white border-solid">Events, Programming &amp; Membership Services</li>
+				<li class="flex flex-col justify-between py-5 border-b border-white border-solid">Fitness, Sauna &amp; Steam</li>
+				<li class="flex flex-col justify-between py-5 border-b border-white border-solid">Restaurant, Bar &amp; Lounge</li>
+				<li class="flex flex-col justify-between py-5 border-b border-white border-solid">Shower &amp; Locker Rooms</li>
+				<li class="flex flex-col justify-between py-5 border-b border-white border-solid">Terrace &amp; Private Dining</li>
+				<li class="flex flex-col justify-between py-5 border-b border-white border-solid">Library, Workspace &amp; Meeting Rooms</li>
+			</ul>	
+		</section>
+		
+		
+		
+		<section class="container">
+			<h2 class="font-sans uppercase text-[2rem] font-bold">Welcome</h2>
+			<h3 class="font-serif font-light text-[2rem] italic">To the World of serif</h3>
+			<div class="grid grid-cols-12">
+				<!-- floors -->
+				<div class="col-span-2">
+					1st floor
+				</div>
+				<!-- floor_cards -->
+				<div class="col-start-4 col-span-9">
+					<!-- <div class="floor_cards_container"> -->
+					
+					<swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false" space-between="30" centered-slides="true" autoplay-delay="2500"  autoplay-disable-on-interaction="false">
+						
+						<!-- <div class="floor_card floor_card_1"> -->
+						<swiper-slide>
+							<div class="flex bg-black">
+								<img src="/images/1st-floor.webp" width="564" height="870" loading="lazy" alt="" class="flex-initial w-1/2" />
+								<div class="flex-initial w-1/2 ps-[8%]">
+									<h3 class="font-serif font-light italic text-4xl mb-12">Arrival. Community. Programming.</h3>
+									<p class="font-serif font-light italic text-2xl mb-4">From speaker series about culture, business, and leadership to live music and storytelling, Serif fosters community through groundbreaking programming.</p>
+									<p class="font-serif font-light italic text-2xl">Join us for bespoke networking events where organic connections with other members spark new beginnings.</p>
+								</div>
+							</div>
+						<!-- </div> -->
+						</swiper-slide>
+						
+						<!-- second floor -->
+						<!-- <div class="floor_card bg-black floor_card_2"> -->
+						<swiper-slide>
+							<div class="flex bg-black">
+								<img src="/images/2nd-floor.webp" width="564" height="870" loading="lazy" alt="" class="flex-initial w-1/2" />
+								<div class="flex-initial w-1/2 ps-[8%]">
+									<h3 class="font-serif font-light italic text-4xl mb-12">Dining &amp; Social Experiences</h3>
+									<p class="font-serif font-light italic text-2xl mb-4">With multiple indoor and outdoor dining spaces, lounges, and bars, Serif can be your place to entertain or be entertained.</p>
+									<p class="font-serif font-light italic text-2xl mb-4">From power luncheons with curated leaders to dinner and a show by named talent, Serif is consistently programmed for you to meet other members.</p>
+									<p class="font-serif font-light italic text-2xl">Curated by Noho Hospitality, Serif is your next haunt. Stop by with friends, reserve a table or work with our concierge to plan your next big event.</p>
+								</div>
+							</div>
+						<!-- </div> -->
+						</swiper-slide>
+						
+						<!-- third floor -->
+						<!-- <div class="floor_card bg-black floor_card_3"> -->
+						<swiper-slide>
+							<div class="flex bg-black">
+								<img src="/images/3rd-floor.webp" width="564" height="870" loading="lazy" alt="" class="flex-initial w-1/2" />
+								<div class="flex-initial w-1/2 ps-[8%]">
+									<h3 class="font-serif font-light italic text-4xl mb-12">Steam. Sauna. Locker Rooms.</h3>
+									<p class="font-serif font-light italic text-2xl">Your membership includes access to our full-floor steam, sauna, shower, locker, and beauty rooms.</p>
+								</div>
+							</div>
+						<!-- </div> -->
+						</swiper-slide>
+						
+						<!-- fourth floor -->
+						<!-- <div class="floor_card bg-black floor_card_4"> -->
+						<swiper-slide>
+							<div class="flex bg-black">
+								<img src="/images/4th-floor.webp" width="564" height="870" loading="lazy" alt="" class="flex-initial w-1/2" />
+								<div class="flex-initial w-1/2 ps-[8%]">
+									<h3 class="font-serif font-light italic text-4xl mb-12">Fitness. Wellness. Work.</h3>
+									<p class="font-serif font-light italic text-2xl mb-4">Available work spaces, bookable conference rooms, and quiet phone booths make Serif the perfect place for you to work away from the office.</p>
+									<p class="font-serif font-light italic text-2xl"> A boutique gym and class studio constantly activated by your favorite brands give you another way to connect with Serif members and accomplish your personal goals.</p>
+								</div>
+							</div>
+						<!-- </div> -->
+						</swiper-slide>
+						
+						<!-- penthouse -->
+						<!-- <div class="floor_card bg-black floor_card_ph"> -->
+						<swiper-slide>
+							<div class="flex bg-black">
+								<img src="/images/penthouse.webp" width="564" height="870" loading="lazy" alt="" class="flex-initial w-1/2" />
+								<div class="flex-initial w-1/2 ps-[8%]">
+									<h3 class="font-serif font-light italic text-4xl mb-12">Founding Members only</h3>
+									<p class="font-serif font-light italic text-2xl mb-4">Tucked away on the secluded sixth floor, only Founding Members have private elevator access to the Penthouse — a place for Founders and their guests to entertain and be entertained.</p>
+									<p class="font-serif font-light italic text-2xl"> The Penthouse is also home to Founder-Only programming and events.</p>
+								</div>
+							</div>
+						<!-- </div> -->
+						</swiper-slide>	
+					<!-- </div> -->
+					</swiper-container>
+				</div>
+			</div>
+		</section>
+		
+		
+		
+		
+		<section class="container mt-24 mb-36">
+			<h2 class="font-sans uppercase text-[2rem] font-bold">Thoughtfully Managed &amp; Designed by</h2>
+			<h3 class="font-serif font-light text-[2rem] italic">Industry Leaders</h3>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-14">
+				<img src="/images/noho-hospitality.webp" alt="Noho Hospitality" loading="lazy" class="rounded-full saturate-0" width="640" height="640" />
+				<div>
+					<p class="font-sans uppercase font-bold">F&amp;B Curated by</p>
+					<p class="font-serif font-light text-[2rem] italic mb-8 mt-2">Noho Hospitality</p>
+					<p class="font-sans font-light">With more than 75 collective years of experience in the hospitality industry between them, Carmellini, Pickard and Ostrom have produced some of its most-talked-about establishments: Cafe Carmellini, Locanda Verde, The Public, Joe’s Pub, Bar Primi, Lure Fish Bar, Lever House.</p>
+				</div>
+				<img src="/images/rafael-de-cardenas.webp" alt="Rafael de Cardenas" loading="lazy" class="rounded-full saturate-0" width="640" height="640" />
+				<div>
+					<p class="font-sans uppercase font-bold">Interior Design by</p>
+					<p class="font-serif font-light text-[2rem] italic mb-8 mt-2">Rafael de Cardenas</p>
+					<p class="font-sans font-light">AD100 Designer known for his bold, geometric, and luxurious designs. His work spans residential projects, commercial projects, art advisory, furniture design, and brand development for clients like Cartier, Nike, Delfina Delettrez, Asia de Cuba, Kenzo, and more.</p>
+				</div>
+			</div>
+		</section>
+		
+		<section id="apply" class="bg-[#1A1A1A] py-20">
+			<div class="container">
+				<h2 class="font-sans uppercase text-[2rem] font-bold">Individual</h2>
+				<h3 class="font-serif font-light text-[2rem] italic">Membership</h3>
+				<div class="w-20 border-t border-white border-solid mt-4"></div>
+				<div class="grid grid-cols-3 gap-4 mt-6">
+					<div class="col-span-1">
+						<p class="text-lg font-serif italic font-light">$3,600 annual dues</p>
+						<p class="text-lg font-serif italic font-light">$500 initiation</p>
+						<ul class="bg-black font-serif italic font-light leading-6 px-7 py-10 mt-6">
+							<li class="mb-8">Exclusive restaurant, bar, lounge, fitness, and workspace by Rafael De Cardenas</li>
+							<li class="mb-8">Curated world-class culinary experience by Noho Hospitality</li>
+							<li class="mb-8">Access to members-only newsletter and digital content</li>
+							<li class="mb-8">Private dining and meeting spaces available</li>
+							<li class="mb-8">Guest privileges (up to three guests without notice)</li>
+							<li class="mb-8">On-site Membership Services Team</li>
+							<li>Membership House Accounts</li>
+						</ul>
+					</div>
+					<div class="col-span-2">
+						<script type="text/javascript" src="https://serif.formstack.com/forms/js.php/serif_space_membership"></script><noscript><a href="https://serif.formstack.com/forms/serif_space_membership" title="Online Form">Online Form - Serif.Space Membership</a></noscript>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="max-w-[90rem] grid grid-cols-8 mx-auto mb-32">
+			<img src="/images/icon-1.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-2.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-3.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-4.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-5.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-6.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-7.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-8.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-9.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-10.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-11.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-12.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-13.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-14.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-15.webp" alt="" width="360" height="540" loading="lazy" />
+			<img src="/images/icon-16.webp" alt="" width="360" height="540" loading="lazy" />
+		</section>
+		
+		<footer class="container">
+			<p class="text-2xl font-serif italic font-light mb-6"><a href="mailto:membership@serif.space">membership@serif.space</a></p>
+			<p class="text-2xl font-serif italic font-light"><a href="https://www.serif.space/" target="_blank" rel="noopener">www.serif.space</p>
+		</footer>
+	
+	</main>
+</Layout>
