@@ -4,7 +4,6 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
 	<main class="overflow-x-hidden">
-
 		<header class="container mt-10 mb-[20vw] sm:mb-0">
 			<div class="grid grid-cols-1 sm:grid-cols-2 grid-flow-col gap-4">
 				<div class="flex flex-col text-left">
@@ -45,7 +44,8 @@ import Layout from '../layouts/Layout.astro';
 					<h4 class="font-serif text-[2rem] sm:text-5xl italic font-light leading-snug mb-10">Serif is a members club for LGBTQ+ and ally leaders from all industries: Fashion, Entertainment, Finance, Music, Tech, and beyond.</h4>
 					<p class="font-serif sm:text-2xl italic font-light mb-6">As a member, you’ll have access to a curated community and a place to network, entertain, be entertained, find inspiration, and maybe even fall in love.</p>
 					<p class="font-serif sm:text-2xl italic font-light mb-20">Ahead of opening, we invite you to become a member of our inaugural location on 66 east 55th Street.</p>
-					<img src="/images/serif-map.webp" alt="Map of Serif's Location" loading="lazy" width="867" height="443" class="mt-2.5 mb-32" />
+					<img src="/images/serif-map.webp" alt="Map of Serif's Location" loading="lazy" width="867" height="443" class="mb-32 hidden sm:block" />
+					<img src="/images/serif-map.webp" alt="Map of Serif's Location" loading="lazy" width="867" height="443" class="aspect-[3/4] block sm:hidden object-cover mb-24" />
 				</div>
 			</div>
 
