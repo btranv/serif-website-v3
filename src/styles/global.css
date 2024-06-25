@@ -11,29 +11,51 @@ body {
 .floor_card img { object-fit: cover; }
 
 
+.custom-pagination {
+  & .slick-dots {
+    & li {
+      & svg {
+        opacity: 30%;
+        transition: all 0.3s ease;
+        &:hover,
+        &:focus {
+          opacity: 70%;
+        }
+      }
+      &.slick-active {
+        & svg {
+          opacity: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+
 #floors_mobile {
-  
+
   & ul.accordion {
     list-style: none;
     padding: 0;
-    
+
     & li {
       margin: 0.5em 0;
-      
+
       & a {
-        
+
         & svg {
           opacity: 30%;
           transition: all 0.3s ease;
         }
-        
+
         &:hover {
-          
+
           & svg {
             opacity: 70%;
           }
         }
-        
+
         &.toggle {
           width: 100%;
           display: block;

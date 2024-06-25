@@ -12,12 +12,25 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-		<title>{title}</title>
+		<title>Apply to Join: Serif</title>
+		<meta name="description" content="A members club for LGBTQ+ industry leaders and creators"/>
+		<link rel="icon" href="/images/favicon.ico"/>
+		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"/>
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"/>
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Apply to Join: Serif" />
+		<meta property="og:description" content="A members club for LGBTQ+ industry leaders and creators" />
+		<meta property="og:url" content="https://www.serif.space/" />
+		<meta property="og:site_name" content="Serif" />
+		<meta property="og:image" content="https://www.serif.space/images/serif-space-social-share.jpg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:type" content="image/jpeg" />
 	</head>
 	<body>
 		<svg xmlns="http://www.w3.org/2000/svg" fill="none" style="display:none;">
@@ -34,7 +47,7 @@ const { title } = Astro.props;
 			</symbol>
 		</svg>
 		<slot />
-			
+
 		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<script>
@@ -46,7 +59,7 @@ const { title } = Astro.props;
 			  '<button class="custom_dot cd_5"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 119 55" class="w-auto h-14"><title>Penthouse</title><path fill="#fff" d="M5 0H0v54h5V0ZM35.088 54.2H24l4.752-7.56L39.408 6.896 36.384 2h11.448c13.824 0 20.736 4.608 20.736 12.96 0 11.88-13.824 19.44-32.04 17.64l-4.464 16.776 3.024 4.824ZM46.32 4.448h-2.232l-6.912 25.776c15.768 1.44 27.144-4.968 27.144-15.48 0-7.272-5.328-10.296-18-10.296ZM76.586 54.2H65.57l4.752-7.56L80.978 6.896 77.954 2H88.97l-4.752 7.56-4.464 16.56h25.2l5.184-19.224L107.114 2h11.016l-4.752 7.56-10.656 39.816 3.024 4.824H94.73l4.752-7.56 4.68-17.496h-25.2l-5.4 20.232 3.024 4.824Z"/></svg></button>',
 			];
 			$(document).ready(function(){
-				
+
 				// click through, floors, desktop
 				$('.floor_cards_container').slick({
 					dots: true,
@@ -62,8 +75,8 @@ const { title } = Astro.props;
 							return customDots[i];
 					},
 				});
-			
-			
+
+
 			// toggle, floors for mobile
 			$('.toggle').click(function(e) {
 				  e.preventDefault();
@@ -81,7 +94,7 @@ const { title } = Astro.props;
 					$this.next().slideToggle(350);
 				}
 			});
-		
+
 			});
 
 		</script>
