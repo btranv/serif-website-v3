@@ -141,7 +141,115 @@ const { title } = Astro.props;
 				}
 			});
 
+
+			const fields = document.querySelectorAll('.fsFieldShortAnswer, .fsFieldEmail, .fsFieldPhone, #field168149711-city');
+
+				fields.forEach(field => {
+				  const label = field.closest('label').querySelector('.fsLabel');
+
+				  field.addEventListener('input', function() {
+					if (field.value) {
+					  label.classList.add('hasValue');
+					} else {
+					  label.classList.remove('hasValue');
+					}
+				  });
+				});
+
+
+
+				// =============== UPDATE "IDENTITY" FIELD
+				const targetFieldset = document.querySelector('#label-field168149652 fieldset');
+				const parent = document.getElementById('label-field168149652');
+
+				parent.addEventListener('click', function(event) {
+					if (targetFieldset.style.display === 'none' || window.getComputedStyle(targetFieldset).display === 'none') {
+						targetFieldset.style.display = 'block';
+					}
+				});
+
+				document.addEventListener('click', function(event) {
+					if (!parent.contains(event.target)) {
+						targetFieldset.style.display = 'none';
+					}
+				});
+
+
+				// =============== UPDATE "INDUSTRY" FIELD
+				const targetFieldsetInd = document.querySelector('#label-field168149730 fieldset');
+				const parentInd = document.getElementById('label-field168149730');
+
+				parentInd.addEventListener('click', function(event) {
+					if (targetFieldsetInd.style.display === 'none' || window.getComputedStyle(targetFieldsetInd).display === 'none') {
+						targetFieldsetInd.style.display = 'flex';
+					}
+				});
+
+				document.addEventListener('click', function(event) {
+					if (!parentInd.contains(event.target)) {
+						targetFieldsetInd.style.display = 'none';
+					}
+				});
+
+
+				// =============== MANAGE STATE LABEL on VALUE
+				var dropdown = document.getElementById('field168497224');
+				var label = document.querySelector('#label-field168497224 .fsLabel');
+
+				function updateLabelClass() {
+					if (dropdown.value) {
+						label.classList.add('hasValue');
+					} else {
+						label.classList.remove('hasValue');
+					}
+				}
+				updateLabelClass();
+				dropdown.addEventListener('change', updateLabelClass);
+
+				// =============== SHOW/HIDE the "OTHER" checkbox for Identity
+				$('#field168149652_other').change(function() {
+					if ($(this).is(':checked')) {
+						$('#label-field168149652 div.fsOptionLabel').slideDown();
+					} else {
+						$('#label-field168149652 div.fsOptionLabel').slideUp();
+					}
+				});
+
+				// =============== CHANGE "OTHER" LABEL for IDENTITY
+				$('#field168149652_other').parent().contents().filter(function() {
+				  return this.nodeType === 3; // Node type 3 is a text node
+				})[0].nodeValue = " I want to be more specific";
+
 			});
+
+
+
+			$(document).ready(function() {
+				// Target the iFrame within the div with class __PrivateStripeElement
+				var $iframe = $('div.__PrivateStripeElement iframe');
+
+				// Ensure the iFrame is fully loaded before trying to manipulate its content
+				$iframe.on('load', function() {
+				  // Access the iFrame's document
+				  var iframeDocument = $iframe[0].contentDocument || $iframe[0].contentWindow.document;
+
+				  // Create a new style element
+				  var $style = $('<style>');
+
+				  // Add CSS rules to the style element
+				  $style.text(`
+					body {
+					  background-color: lightblue;
+					}
+					p {
+					  color: red;
+					}
+				  `);
+
+				  // Append the style element to the iFrame's head
+				  $(iframeDocument.head).append($style);
+				});
+			  });
 
 		</script>
 	</body>
