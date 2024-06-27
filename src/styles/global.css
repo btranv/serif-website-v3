@@ -7,6 +7,9 @@
 body {
   @apply bg-black text-white;
 }
+html, body {
+    scroll-behavior: smooth;
+}
 
 .floor_card img { object-fit: cover; }
 
@@ -99,7 +102,7 @@ ul li a.toggle:hover {
 .cibUCp { display:none !important; }
 
 #fsSection0 { display:grid; grid-template-columns: 1fr 1fr !important; column-gap:1.5rem; align-items: start !important; }
-
+*:focus {outline:0px none transparent;}
 input:focus,
 input:active,
 select,
@@ -113,8 +116,9 @@ select:active { outline-color: rgb(0 0 0 / 0) !important; outline-width: 0 !impo
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
- background-color: rgb(0 0 0 / 0);
+ background-color: #1A1A1A !important;
  width: 100%;
+ -moz-appearance:none;
  height: 2.5rem;
 }
 
@@ -195,7 +199,7 @@ select { background-color: #1A1A1A;margin-top: 1rem; }
     position: absolute;
     background-color: #000;
     z-index: 2;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem 0.5rem 1rem;
 
     top: 2.5rem;
     width: max-content;
@@ -281,4 +285,13 @@ select { background-color: #1A1A1A;margin-top: 1rem; }
   #fsSection0 { grid-template-columns: auto !important; }
 }
 
-
+select[data-com-onepassword-filled="dark"],
+input[data-com-onepassword-filled="dark"],
+input[data-com-onepassword-filled],
+input:autofill,
+input:-webkit-autofill,
+input:-moz-autofill,
+input:-ms-autofill {
+    background-color: #1A1A1A !important;
+    color: inherit;
+}
