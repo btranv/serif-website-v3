@@ -97,9 +97,8 @@ ul li a.toggle:hover {
 }
 .StyledErrorBanner-sc-lo45jw-0,
 .cibUCp { display:none !important; }
-.fsPage { display:grid; grid-template-columns: 1fr 1fr; column-gap:1.5rem; }
-#fsSection168153105 { grid-column: 1 / 2; }
-#fsSection168153890 { grid-column: 2 / 3; align-items: start; }
+
+#fsSection0 { display:grid; grid-template-columns: 1fr 1fr !important; column-gap:1.5rem; align-items: start !important; }
 
 input:focus,
 input:active,
@@ -162,7 +161,7 @@ select { background-color: #1A1A1A;margin-top: 1rem; }
 #label-field168497224,
 #label-field168497209 { margin-bottom: 1rem; }
 
-
+#label-field168149652,
 #label-field168149730 { min-height: 40px;}
 
 #label-field168149652,
@@ -174,13 +173,16 @@ select { background-color: #1A1A1A;margin-top: 1rem; }
     background-color: #000;
     z-index: 2;
     padding: 0.5rem 1rem;
-    left: 0;
+
     top: 2.5rem;
     width: max-content;
   }
 }
 
 #label-field168149652 {
+  & fieldset {
+    left: 0;
+  }
   & input[type="checkbox"] {
     margin-right: 0.5rem;
   }
@@ -189,6 +191,9 @@ select { background-color: #1A1A1A;margin-top: 1rem; }
   }
 }
 #label-field168149730 {
+  & fieldset {
+    right: 0;
+  }
   & input[type="checkbox"] {
     margin-right: 0.5rem;
   }
@@ -234,4 +239,6 @@ select { background-color: #1A1A1A;margin-top: 1rem; }
     flex: 1 1 calc(50% - 1rem);
   }
 }
-
+@media (max-width:640px) {
+  #fsSection0 { grid-template-columns: auto !important; }
+}
