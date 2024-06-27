@@ -193,18 +193,18 @@ const { title } = Astro.props;
 
 
 				// =============== MANAGE STATE LABEL on VALUE
-				var dropdown = document.getElementById('field168497224');
-				var label = document.querySelector('#label-field168497224 .fsLabel');
-
-				function updateLabelClass() {
-					if (dropdown.value) {
-						label.classList.add('hasValue');
-					} else {
-						label.classList.remove('hasValue');
-					}
-				}
-				updateLabelClass();
-				dropdown.addEventListener('change', updateLabelClass);
+// 				var dropdown = document.getElementById('field168497224');
+// 				var label = document.querySelector('#label-field168497224 .fsLabel');
+//
+// 				function updateLabelClass() {
+// 					if (dropdown.value) {
+// 						label.classList.add('hasValue');
+// 					} else {
+// 						label.classList.remove('hasValue');
+// 					}
+// 				}
+// 				updateLabelClass();
+// 				dropdown.addEventListener('change', updateLabelClass);
 
 				// =============== SHOW/HIDE the "OTHER" checkbox for Identity
 				$('#field168149652_other').change(function() {
@@ -220,36 +220,12 @@ const { title } = Astro.props;
 				  return this.nodeType === 3; // Node type 3 is a text node
 				})[0].nodeValue = " I want to be more specific";
 
+
+				// =============== ADD "STEP 2" BEFORE PAYMENT BUTTON ON FORM
+				var newHtml = '<div id="step_two_label">Step 2: Payment</div>';
+				$('#fsSubmit5822057 > div').prepend(newHtml);
+
 			});
-
-
-
-			$(document).ready(function() {
-				// Target the iFrame within the div with class __PrivateStripeElement
-				var $iframe = $('div.__PrivateStripeElement iframe');
-
-				// Ensure the iFrame is fully loaded before trying to manipulate its content
-				$iframe.on('load', function() {
-				  // Access the iFrame's document
-				  var iframeDocument = $iframe[0].contentDocument || $iframe[0].contentWindow.document;
-
-				  // Create a new style element
-				  var $style = $('<style>');
-
-				  // Add CSS rules to the style element
-				  $style.text(`
-					body {
-					  background-color: lightblue;
-					}
-					p {
-					  color: red;
-					}
-				  `);
-
-				  // Append the style element to the iFrame's head
-				  $(iframeDocument.head).append($style);
-				});
-			  });
 
 		</script>
 	</body>
