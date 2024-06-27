@@ -163,6 +163,15 @@ span.fsFieldCell fieldset { display:none; }
 
 select { background-color: #1A1A1A;margin-top: 1rem; }
 
+#label-field168816570 {
+  select {
+    margin-right: 0.75rem;
+  }
+}
+#checked_identity {
+    margin-top: 0.5rem;
+}
+
 #label-field168349441,
 #label-field168149626,
 #label-field168149694,
@@ -172,7 +181,8 @@ select { background-color: #1A1A1A;margin-top: 1rem; }
 #label-field168489048,
 #label-field168497221,
 #label-field168497224,
-#label-field168497209 { margin-bottom: 1rem; }
+#label-field168497209,
+#label-field168816706 { margin-bottom: 1rem; }
 
 #label-field168149652,
 #label-field168149730 { min-height: 40px;}
@@ -272,4 +282,3 @@ select { background-color: #1A1A1A;margin-top: 1rem; }
 }
 
 
-.StyledReferralBadge-sc-5yap1m-0 { display: none !important; }

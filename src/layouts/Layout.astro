@@ -176,20 +176,20 @@ const { title } = Astro.props;
 
 
 				// =============== UPDATE "INDUSTRY" FIELD
-				const targetFieldsetInd = document.querySelector('#label-field168149730 fieldset');
-				const parentInd = document.getElementById('label-field168149730');
-
-				parentInd.addEventListener('click', function(event) {
-					if (targetFieldsetInd.style.display === 'none' || window.getComputedStyle(targetFieldsetInd).display === 'none') {
-						targetFieldsetInd.style.display = 'flex';
-					}
-				});
-
-				document.addEventListener('click', function(event) {
-					if (!parentInd.contains(event.target)) {
-						targetFieldsetInd.style.display = 'none';
-					}
-				});
+// 				const targetFieldsetInd = document.querySelector('#label-field168149730 fieldset');
+// 				const parentInd = document.getElementById('label-field168149730');
+//
+// 				parentInd.addEventListener('click', function(event) {
+// 					if (targetFieldsetInd.style.display === 'none' || window.getComputedStyle(targetFieldsetInd).display === 'none') {
+// 						targetFieldsetInd.style.display = 'flex';
+// 					}
+// 				});
+//
+// 				document.addEventListener('click', function(event) {
+// 					if (!parentInd.contains(event.target)) {
+// 						targetFieldsetInd.style.display = 'none';
+// 					}
+// 				});
 
 
 				// =============== MANAGE STATE LABEL on VALUE
@@ -224,6 +224,51 @@ const { title } = Astro.props;
 				// =============== ADD "STEP 2" BEFORE PAYMENT BUTTON ON FORM
 				var newHtml = '<div id="step_two_label">Step 2: Payment</div>';
 				$('#fsSubmit5822057 > div').prepend(newHtml);
+
+				// =============== SET DATE OF BIRTH LABEL AS checked
+				$('#label-field168816570 .fsRequiredLabel').addClass('hasValue');
+
+
+				// =============== SELECTED IDENTITY ITEMS
+				$('<div id="checked_identity"></div>').insertBefore('#label-field168149652 fieldset');
+
+				// Function to update the #checked_identity div
+				function updateCheckedIdentity() {
+					const checkedValues = $('input[type="checkbox"]:checked')
+						.map(function () {
+							if (this.id === 'field168149652_other') {
+								return $('#field168149652_otherValue').val();
+							}
+							return this.value;
+						})
+						.get()
+						.filter(value => value !== '') // Filter out empty values
+						.join(', ');
+
+					$('#checked_identity').text(checkedValues);
+
+					// Add or remove "hasValue" class
+					if (checkedValues) {
+						$('#label-field168149652 .fsRequiredLabel').addClass('hasValue');
+					} else {
+						$('#label-field168149652 .fsRequiredLabel').removeClass('hasValue');
+					}
+				}
+
+				// Attach change event listener to the checkboxes and other value input
+				$('input[type="checkbox"]').change(function () {
+					updateCheckedIdentity();
+				});
+
+				$('#field168149652_otherValue').on('input', function () {
+					if ($('#field168149652_other').is(':checked')) {
+						updateCheckedIdentity();
+					}
+				});
+
+				// Initial update in case any checkboxes are pre-checked
+				updateCheckedIdentity();
+
 
 			});
 
