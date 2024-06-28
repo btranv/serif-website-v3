@@ -95,6 +95,9 @@ html, body {
   }
 }
 
+
+
+
 ul li a.toggle:hover {
   background: rgba(0, 0, 0, 0.9);
 }
@@ -147,6 +150,8 @@ input[type="tel"] {
 
 span.fsFieldCell fieldset { display:none; }
 
+#label-field168902466 fieldset { display:block; }
+
 .ButtonContainer--pay { display:none !important; }
 
 #label-field168787951 {
@@ -162,6 +167,34 @@ span.fsFieldCell fieldset { display:none; }
   }
   & .totals_final {
     font-size: 1.25rem;
+  }
+}
+
+#label-field168902466 {
+  border-bottom: none !important;
+  margin-top:2rem;
+
+  & label {
+    font-size: 0.875rem;
+    color: #8f8f8f;
+    line-height: 1.3 !important;
+    display: inline-block;
+
+    & a {
+      text-decoration: underline;
+      color: #8f8f8f;
+      transition: all 0.3s ease;
+
+      &:hover,
+      &:focus { color: #bdbdbd; }
+    }
+  }
+
+  #field168902466_1 {
+    float: left;
+    margin-bottom: 3rem;
+    margin-right: 0.5rem;
+    margin-top: 0.2rem;
   }
 }
 
@@ -282,7 +315,12 @@ select { background-color: #1A1A1A;margin-top: 1rem; }
   }
 }
 @media (max-width:640px) {
-  #fsSection0 { grid-template-columns: auto !important; }
+  #fsSection0 {
+    grid-template-columns: auto !important;
+  }
+  #fsForm-5822057 > div {
+      padding: 0 !important;
+  }
 }
 
 select[data-com-onepassword-filled="dark"],

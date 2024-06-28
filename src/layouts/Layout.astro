@@ -55,10 +55,16 @@ const { title } = Astro.props;
 		</svg>
 		<slot />
 
+		<div id="individual-membership-agreement" class="modal bg-black " style="max-width: 90%; width: initial;">
+			<h1 class="font-serif italic text-5xl mt-4 mb-2">Individual Membership Agreement</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque lacus. Quisque accumsan nisi odio, non laoreet massa dignissim quis. Ut rhoncus convallis nunc, eu fringilla dui maximus a.</p>
+			<p>Suspendisse elementum et massa ac scelerisque. Nunc vulputate pretium nulla in pellentesque. In vulputate id mi non ullamcorper. Nam et eros a libero bibendum dignissim. Nullam elementum imperdiet interdum. Morbi sodales, lectus ac condimentum malesuada, magna ex convallis metus, et vulputate erat ipsum a augue. Integer augue nisl, tincidunt eu leo in, molestie convallis diam. Nunc faucibus mollis tincidunt. Pellentesque vitae felis vitae erat fermentum sodales eu et massa.</p>
+		</div>
 
-		<div id="privacy-policy" class="modal bg-black " style="max-width: 90%; width: initial;">
-			<h1 class="text-serif italic text-5xl mt-4 mb-2">Privacy Policy</h1>
-			<p class="mb-4 text-sans">Updated June 24, 2024</p>
+
+		<div id="privacy-policy" class="modal bg-black" style="max-width: 90%; width: initial;">
+			<h1 class="font-serif italic text-5xl mt-4 mb-2">Privacy Policy</h1>
+			<p class="mb-4 font-sans">Updated June 24, 2024</p>
 
 			<p>This Privacy Policy outlines how www.serif.space collects, uses, discloses, and safeguards the personal information provided by users ("you," "your," or "users") when you visit and interact with our website. Protecting your privacy and ensuring the security of your personal information is of utmost importance to us. By using our website, you consent to the practices described in this policy.</p>
 
@@ -269,6 +275,28 @@ const { title } = Astro.props;
 				// Initial update in case any checkboxes are pre-checked
 				updateCheckedIdentity();
 
+				// ADJUST embedded form for checkbox
+				$('#label-field168902466').before('<div></div>');
+
+				// Pre-check agree checkbox
+				$('#field168902466_1').prop('checked', true);
+
+
+
+
+				// 2. Find and replace text within the label
+				var $label = $('#field168902466_1').closest('label');
+				var labelHtml = $label.html();
+
+				// Replace "Privacy Policy" with the anchor tag
+				labelHtml = labelHtml.replace('agreement', 'By checking this box you agree to the <a href="#privacy-policy" rel="modal:open">Privacy Policy</a> and the <a href="#individual-membership-agreement" rel="modal:open">Individual Membership Agreement</a>');
+
+				// Update the label with the new content while preserving the input's value
+				$label.html(labelHtml);
+
+				// Re-insert the input element with its original attributes
+				var $input = $('#field168902466_1');
+				$label.prepend($input);
 
 			});
 
