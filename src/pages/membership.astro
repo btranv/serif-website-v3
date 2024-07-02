@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Serif: Exclusive LGBTQ+ and Ally Members Club in NYC" description="Join Serif, a premier members club for LGBTQ+ and ally leaders across industries. Enjoy exclusive access to curated communities, networking events, entertainment, fitness facilities, dining experiences, and more at our East 55th Street & Park Avenue location in NYC. Become a member today!">
 	<main class="overflow-x-hidden">
-		<header class="container mt-10 mb-[42vw] sm:mb-[16vw]">
+		<header class="container mt-10 mb-[20vw] sm:mb-[16vw]">
 			<div class="grid grid-cols-1 sm:grid-cols-2 grid-flow-col gap-4">
 				<div class="flex flex-col text-left">
 					<svg class="w-36 inline aspect-[661/308]">
@@ -21,25 +21,23 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</header>
 
-		<div class="container text-center block sm:hidden mt-[20vw]">
-			<div class="mt-8"><a href="#join" class="rounded-full px-6 py-4 bg-white block w-full border-2 border-white border-solid text-black text-serif uppercase font-bold hover:text-white hover:bg-black transition-colors duration-300 ">Join Today</a></div>
+		<div class="w-custom-108vw max-w-custom-96.5625rem -ml-[4vw] 2xl:mx-auto hidden sm:block">
+			<svg class="w-custom-108vw max-w-custom-96.5625rem aspect-[661/308]">
+				<use href="#serif_logo"></use>
+			</svg>
 		</div>
 
 
-		<section class="container mt-48">
-			<div class="flex flex-col sm:flex-row lg:flex-row gap-4">
-				<div class="w-full md:w-30 lg:w-2/5">
-					<h2 class="font-sans uppercase text-2xl sm:text-[2rem] font-bold">Welcome</h2>
-					<h3 class="font-serif font-light text-2xl sm:text-[2rem] italic mt-2">to Serif</h3>
-				</div>
-
-				<div class="w-full md:w-70 lg:w-3/5">
-					<h4 class="font-serif text-[2rem] sm:text-5xl italic font-light leading-snug mb-10">Congratulations! We're excited to welcome you to Serif.</h4>
-					<p class="font-serif sm:text-2xl italic font-light mb-20">You are invited to join the Serif community &mdash; fill out the form below, your membership awaits!</p>
-				</div>
+		<section class="container flex justify-center my-24 text-center">
+			<div class="w-full md:w-2/3 lg:w-3/4">
+				<h2 class="font-sans uppercase text-2xl sm:text-[2rem] font-bold mb-8">Welcome</h2>
+				<h4 class="font-serif text-[2rem] sm:text-5xl italic font-light leading-snug">You are invited to join the Serif community &mdash; fill out the form below, your membership awaits!</h4>
 			</div>
-
 		</section>
+
+		<div class="container text-center block sm:hidden mb-[20vw]">
+			<div class="mt-8"><a href="#join" class="rounded-full px-6 py-4 bg-white block w-full border-2 border-white border-solid text-black text-serif uppercase font-bold hover:text-white hover:bg-black transition-colors duration-300 ">Join Today</a></div>
+		</div>
 
 		<section class="container mb-16">
 			<h2 class="font-sans uppercase text-2xl sm:text-[2rem] font-bold">Benefits of</h2>
@@ -73,7 +71,7 @@ import Layout from '../layouts/Layout.astro';
 						<div class="ms-0 sm:ms-6">
 							<h3 class="font-serif font-light text-2xl italic pt-6">Step 1: Personal Information</h3>
 							<div class="font-sans font-light mt-4">Complete the form below, then continue to our Stripe for your secure payment checkout.</div>
-							<div class="font-sans font-light text-sm opacity-60 mt-2 italic -mb-2">* Required Field</div>
+							<div class="font-sans font-light text-sm opacity-60 mb-4 sm:mb-0 mt-2 italic -mb-2">* Required Field</div>
 						</div>
 						<script type="text/javascript" src="https://serif.formstack.com/forms/js.php/serif_space_membership?no_style_strict=1"></script>
 					</div>
