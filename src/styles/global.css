@@ -104,6 +104,13 @@ ul li a.toggle:hover {
 .StyledErrorBanner-sc-lo45jw-0,
 .cibUCp { display:none !important; }
 
+.fsForm {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 #fsSection0 { display:grid; grid-template-columns: 1fr 1fr !important; column-gap:1.5rem; align-items: start !important; }
 *:focus {outline:0px none transparent;}
 input:focus,
@@ -119,10 +126,15 @@ select:active { outline-color: rgb(0 0 0 / 0) !important; outline-width: 0 !impo
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
- background-color: #1A1A1A !important;
+ /* background-color: #1A1A1A !important; */
  width: 100%;
  -moz-appearance:none;
  height: 2.5rem;
+ font-family: 'gtamerica', sans-serif;
+ color: rgb(255 255 255 / 0.9);
+ font-size: 1rem;
+ font-weight: 300;
+ padding-left: 0;
 }
 
 .fsFieldCell,
@@ -164,9 +176,11 @@ span.fsFieldCell fieldset { display:none; }
     font-weight: 300;
     justify-content: space-between;
     margin-top:0.25rem;
+    color: rgb(255 255 255 / 0.9);
   }
   & .totals_final {
     font-size: 1.25rem;
+    color: rgb(255 255 255 / 0.9);
   }
 }
 
@@ -175,14 +189,16 @@ span.fsFieldCell fieldset { display:none; }
   margin-top:2rem;
 
   & label {
-    font-size: 0.875rem;
-    color: #8f8f8f;
+    font-size: 0.875rem !important;
     line-height: 1.3 !important;
-    display: inline-block;
+    display: inline-block !important;
+    font-family: 'gtamerica', sans-serif;
+    color: rgb(255 255 255 / 0.7);
+    font-weight: 300;
 
     & a {
       text-decoration: underline;
-      color: #8f8f8f;
+      color: rgb(255 255 255 / 0.7);
       transition: all 0.3s ease;
 
       &:hover,
@@ -201,12 +217,26 @@ span.fsFieldCell fieldset { display:none; }
 select { background-color: #1A1A1A;margin-top: 1rem; }
 
 #label-field168816570 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  height: 49px;
+  margin-top: -8px;
+  margin-bottom: 0;
+
   select {
     margin-right: 0.75rem;
+    font-family: 'gtamerica';
+    font-size: 1rem;
+    color: rgb(255 255 255 / 0.9);
+    font-weight: 300;
   }
 }
 #checked_identity {
     margin-top: 0.5rem;
+    font-family: 'gtamerica', sans-serif;
+    color: rgb(255 255 255 / 0.9);
+    font-weight: 300;
 }
 
 #label-field168349441,
@@ -219,23 +249,50 @@ select { background-color: #1A1A1A;margin-top: 1rem; }
 #label-field168497221,
 #label-field168497224,
 #label-field168497209,
-#label-field168816706 { margin-bottom: 1rem; }
+#label-field168816706 {
+  margin-bottom: 1rem;
+  height: 41px;
+}
 
 #label-field168149652,
 #label-field168149730 { min-height: 40px;}
 
-#label-field168149652,
-#label-field168149730 {
+#label-field168149652 {
   margin-bottom: 1rem;
 
   & fieldset {
     position: absolute;
     background-color: #000;
     z-index: 2;
-    padding: 0.5rem 1rem;
-
+    padding: 0.5rem 1rem 1.5rem;
+    font-family: 'gtamerica', sans-serif;
     top: 2.5rem;
     width: max-content;
+    left: 0;
+
+    & > label {
+      font-size: 1rem !important;
+      display: flex !important;
+      align-items: center !important;
+      line-height: 0 !important;
+      color: rgb(255 255 255 / 0.9) !important;
+      margin-top:1rem !important;
+    }
+  }
+
+  & input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+
+  & .fsOptionLabel {
+
+
+    & span {
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgb(255 255 255 / 0.9);
+      margin-top: 0.5rem;
+    }
   }
 }
 
@@ -259,7 +316,6 @@ select { background-color: #1A1A1A;margin-top: 1rem; }
   }
 }
 
-
 #fsSubmit5822057 {
   & > div {
     display: flex;
@@ -276,6 +332,7 @@ select { background-color: #1A1A1A;margin-top: 1rem; }
       background-color: #FFF;
       border:2px solid #FFF;
       border-radius:9999px;
+      font-family: 'gtamerica', sans-serif;
 
       &:hover,
       &:active {
@@ -298,6 +355,7 @@ select { background-color: #1A1A1A;margin-top: 1rem; }
       line-height: 2rem;
       font-family: 'nib', ui-serif, Georgia;
       margin-right: 1rem;
+      color: rgb(255 255 255 / 0.9);
     }
   }
 }
